@@ -1,0 +1,303 @@
+/*中间分类模块开始*/
+.grid{ /*设置中间分类区域整体高度*/
+    height: 480px;
+    /*background-color: pink;*/
+}
+
+/*左部分开始*/
+.grid-col1{ /*设置左边部分的宽高背景*/
+    width: 190px;
+    height: 100%;
+    background-color: #6e6568;
+    color: #fff;
+    font-size: 14px;/*给/的颜色*/
+    position: relative;
+}
+.ad{
+    width: 250px;
+    height: 480px;
+    /*background-color: pink;*/
+    position: absolute;
+    top: 0;
+    left: -250px;
+}
+.ad-r{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    z-index: 999;
+    width: 0;
+    height: 480px;
+    background: url("../images/ad-r.jpg");
+    transition: all 0.5s;
+}
+.ad:hover .ad-r{ /*鼠标经过大盒子时图片会变宽*/
+    width: 990px;
+}
+.grid-col1 a{
+    color: #fff;
+    font-size: 14px; /*给字的颜色*/
+    margin: 0 3px;
+}
+.grid-col1 a:hover{ /*鼠标经过文字时变色*/
+    color: #f10215;
+}
+.grid-col1 ul{
+    padding: 10px 0;
+}
+.grid-col1 ul li{
+    padding-left: 12px; /*使用magin的话hover效果会出问题*/
+    height: 29px;
+    line-height: 26px;
+}
+.grid-col1 ul li:hover{ /*鼠标经过分类时会变色*/
+    background-color: #9c9698;
+}
+/*左部分结束*/
+/*中部分开始*/
+.grid-col2{ /*设置中间部分整体的宽高/背景/左外边距*/
+    width: 790px;
+    height: 100%;
+    /*background-color: purple;*/
+    margin-left: 10px;
+}
+    /*banner广告部分*/
+.grid-col2-b div{ /*对广告部分设置左右浮动*/
+    float: left;
+    margin-top: 10px;
+}
+.grid-col2-b div:last-child{
+    float: right;
+    margin-top: 10px;
+}
+    /*箭头部分*/
+.grid-col2-t{ /*子绝父相，设置父亲元素相对定位*/
+    position: relative;
+}
+.arrow-l,
+.arrow-r{ /*设置左右按钮绝对定位/高度/背景色/相对Y轴的距离/文字水平居中/行高/字号/箭头颜色/箭头字体/箭头粗细*/
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0,0,0,0.3);
+    transform: translateY(-50%);
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    color: rgba(255,255,255,0.6);
+    font-family: Arial,monospace;
+    font-weight: normal;
+}
+.arrow-r{ /*设置r的位置*/
+    right: 0;
+}
+.circle{ /*设置轮播条的宽高/背景色/绝对定位/相对于X轴的位置/设置圆角/左内边距/设置盒模型元素内容*/
+    width: 175px;
+    height: 20px;
+    background-color: rgba(255,255,255,0.3);
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding-left: 8px;
+    box-sizing: border-box;
+}
+.circle li { /*设置轮播条中按钮的宽高/背景色/圆角/左浮动/外边距/显示的光标类型*/
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+    margin: 4px;
+    cursor: pointer; /*鼠标经过li的时候变为可点击*/
+}
+.circle .current{ /*设置特定按钮的颜色*/
+    background-color: #f10215;
+}
+/*中部分结束*/
+/*右部分开始*/
+.grid-col3{ /*设置右边部分的宽高/背景*/
+    width: 190px;
+    height: 100%;
+    /*background-color: skyblue;*/
+}
+    /*登陆模块*/
+.login{ /*设置宽高/边框/背景色/内边距*/
+    height: 85px;
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 15px;
+}
+.login-t{ /*设置模块内文字宽高/行高/字号/123/颜色/设置内边距将文字挤到右边/相对定位-子绝父相*/
+    width: 95px;
+    height: 60px;
+    line-height: 20px;
+    font-size: 12px;
+    white-space: nowrap; /*1.强制一行内显示*/
+    overflow: hidden; /*2.溢出隐藏*/
+    text-overflow: ellipsis; /*3.超出部分显示省略号,三步固定格式不能更改*/
+    color: #666;
+    padding-left: 60px; /*设置外边距将文字挤到右边*/
+    position: relative;
+}
+.login-t a{
+    color: #666666;
+}
+.login-t a:hover{
+    color: #f10215;
+}
+.user-info{ /*设置头像边框宽高/通过绝对定位精灵图设置边框样式*/
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../images/sprite_userinfo@1x.png") no-repeat -70px 0;
+}
+.user-info img{ /*设置头像宽高/圆角/内边距*/
+    width: 40px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.login-b a{ /*设置按钮为行内块级/左浮动/宽高/行高/边框/左外边距/文字水平居中/文字颜色*/
+    display: inline-block;
+    float: left;
+    width: 70px;
+    height: 20px;
+    line-height: 20px;
+    border: 2px solid #f10215;
+    margin-right: 3px;
+    text-align: center;
+    color: #f10215;
+}
+.login-b a:hover{ /*设置鼠标悬停时的背景颜色与文字颜色*/
+    background-color: #f10215;
+    color: #fff;
+}
+    /*新闻模块*/
+.news{ /*设置该模块整体高度/底部边框/背景色/内边距/盒模型元素*/
+    height: 154px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    padding: 7px 13px 0;
+    box-sizing: border-box;
+}
+.news-t{ /*设置模块内整体元素高度/底部边框/绝对定位*/
+    height: 19px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.news-t a{ /*设置盒内整体文字左浮动/高度/行高*/
+    float: left;
+    height: 17px;
+    line-height: 17px;
+}
+.cuxiao{ /*设置盒内促销元素宽度/右边框*/
+    width: 38px;
+    border-right: 1px solid #ccc;
+}
+.gg{ /*设置公告元素左外边距*/
+    margin-left: 15px;
+}
+.news-t .more{ /*设置盒内更多元素向右浮动*/
+    float: right;
+}
+.news-t div{ /*设置红线宽高/颜色/通过绝对定位达成演示效果*/
+    height: 2px;
+    width: 28px;
+    background-color: #f10215;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+.news-b{ /*设置促销广告部分上内边距*/
+    padding-top: 15px ;
+}
+.news-b li{ /*设置内容行高*/
+    height: 23px;
+    line-height: 23px;
+}
+    /*服务扩展模块*/
+.expand{
+    height: 209px;
+    background-color: #fff;
+    overflow: hidden; /*这个宽度继承190*/
+}
+.expand ul{
+    width: 195px; /*父亲时190，li放不下去，此时让ul宽度变大*/
+}
+.expand li{
+    width: 47px;
+    height: 69px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    float: left;
+}
+.expand li a{
+    display: block;
+    padding-top: 15px;
+    text-align: center;
+}
+.expand li i{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: url(../images/sprite_fs@1x.png) no-repeat;
+    width: 20px;
+    height: 23px;
+    background-position: -3px -88px;
+}
+.expand  li:first-child i{
+    width: 20px;
+    height: 23px;
+    background-position: -5px -88px;
+}
+.expand  li:nth-child(2) i{
+    width: 20px;
+    height: 23px;
+    background-position: -2px -44px;
+}.expand  li:nth-child(3) i{
+    width: 20px;
+    height: 23px;
+    background-position: -45px -88px;
+}.expand  li:nth-child(4) i{
+    width: 24px;
+    height: 23px;
+    background-position: -88px 2px;
+}.expand  li:nth-child(5) i{
+    width: 24px;
+    height: 23px;
+    background-position: -87px -44px;
+}.expand  li:nth-child(6) i{
+    width: 20px;
+    height: 23px;
+    background-position: -3px -2px;
+}.expand  li:nth-child(7) i{
+    width: 23px;
+    height: 23px;
+    background-position: -45px -48px;
+}.expand  li:nth-child(8) i{
+    width: 20px;
+    height: 23px;
+    background-position: -90px -89px;
+}.expand  li:nth-child(9) i{
+    width: 20px;
+    height: 23px;
+    background-position: -134px 0;
+}.expand  li:nth-child(10) i{
+    width: 20px;
+    height: 23px;
+    background-position: -135px -45px;
+}.expand  li:nth-child(11) i{
+    width: 23px;
+    height: 23px;
+    background-position: -133px -92px;
+}.expand  li:nth-child(12) i{
+    width: 20px;
+    height: 23px;
+    background-position: -46px -1px;
+}
+/*右部分结束*/
+
